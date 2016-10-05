@@ -1,9 +1,36 @@
+
 body{
     background-color: turquoise;
 }
 
 #container{
-    width: 960px;
-    height: 660px;
     background-image: url("../img/plan.png");
+    background-repeat: no-repeat;
+    height: 960px;
+    padding-top: 100px;
+}
+
+#room1 {
+    background-color: rgba(255, 0, 0, .7);
+    width: 355px;
+    height: 337px;
+    margin-left: 161px;
+    float: left;
+}
+
+#room2{
+    background-color: rgba(0, 0, 255, .7);
+    width: 232px;
+    height: 135px;
+    margin-left: 270px;
+}
+
+#room3{
+    background-color: rgba(255, 255, 0, .7);
+    width: 232px;
+    height: 135px;
+    margin-left: 270px;
+    width: 283px;
+    height: 165px;
+    margin-left: 105px;
 }
