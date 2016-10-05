@@ -1,9 +1,9 @@
 
-body{
+body {
     background-color: turquoise;
 }
 
-#container{
+#container {
     background-image: url("../img/plan.png");
     background-repeat: no-repeat;
     height: 960px;
@@ -17,19 +17,64 @@ body{
     float: left;
 }
 
-#room2{
+#room2 {
     background-color: rgba(0, 0, 255, .7);
-    width: 232px;
-    height: 135px;
-    margin-left: 270px;
+    width: 117px;
+    height: 156px;
+    margin-left: 188px;
+    margin-top: 45px;
+    float: left;
 }
 
-#room3{
+#room3 {
+    background-color: rgba(255, 255, 0, .7);
+    width: 178px;
+    height: 201px;
+    margin-left: -301px;
+    margin-top: 68px;
+    float: left;
+}
+
+#room4 {
+    background-color: rgba(255, 125, 0, .7);
+    width: 69px;
+    height: 121px;
+    margin-left: -729px;
+    margin-top: 299px;
+    float: left;
+}
+
+#room5 {
+    background-color: rgba(125, 255, 0, .7);
+    width: 232px;
+    height: 347px;
+    margin-left: -116px;
+    margin-top: 208px;
+    float: left;
+}
+
+#room6 {
     background-color: rgba(255, 255, 0, .7);
     width: 232px;
     height: 135px;
     margin-left: 270px;
-    width: 283px;
-    height: 165px;
-    margin-left: 105px;
+    float: left;
+}
+
+#room7 {
+    background-color: rgba(255, 50, 0, .7);
+    width: 255px;
+    height: 211px;
+    margin-left: -678px;
+    margin-top: 342px;
+    float: left;
+}
+
+#room8 {
+    background-color: rgba(255, 155, 100, .7);
+    width: 180px;
+    height: 277px;
+    margin-left: -416px;
+    margin-top: 277px;
+    float: left;
 }
