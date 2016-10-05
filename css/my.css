@@ -73,6 +73,8 @@ body {
 
 #room8 {
     background-color: rgba(255, 155, 100, .7);
+    text-align: center;
+    vertical-align: middle;
     width: 180px;
     height: 277px;
     margin-left: -416px;
