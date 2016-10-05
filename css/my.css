@@ -54,12 +54,13 @@ body {
 }
 
 #room6 {
-    background-color: rgba(255, 255, 0, .7);
-    width: 232px;
-    height: 135px;
-    margin-left: 270px;
-    float: left;
-}
+     background-color: rgba(255, 255, 0, .7);
+     width: 178px;
+     height: 126px;
+     margin-left: -862px;
+     margin-top: 429px;
+     float: left;
+ }
 
 #room7 {
     background-color: rgba(255, 50, 0, .7);
