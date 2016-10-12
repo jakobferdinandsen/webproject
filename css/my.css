@@ -7,6 +7,9 @@ body {
     background-image: url("../img/plan.png");
     background-repeat: no-repeat;
     height: 960px;
+    text-align: center;
+    vertical-align: center;
+
 }
 
 #room1 {
@@ -15,6 +18,7 @@ body {
     height: 337px;
     margin-left: 161px;
     float: left;
+    line-height: 100%;
 }
 
 #room2 {

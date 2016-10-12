@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <p id="myP">This is a p.</p>
+
+        <input type="text" placeholder="Type your name" id="myInput">
+        <button onclick="sayHi()" id="myBtn">Say Hi</button>
+
+        <script src="js/playJS.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#myBtn').hide();
+            });
+            $('#myInput').click(function () {
+                $('#myBtn').fadeOut('slow').fadeIn('slow');
+            });
+        </script>
+    </body>
+</html>
