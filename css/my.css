@@ -12,6 +12,12 @@ body {
 
 }
 
+#currentWeather {
+    float: left;
+    margin-left: 5px;
+    text-align: left;
+}
+
 #inputContainer {
     background-color: rgba(125, 125, 125, .7);
     width: 355px;
