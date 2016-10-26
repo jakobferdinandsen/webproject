@@ -18,7 +18,7 @@ $(document).ready(function () {
             latitude: startPos.coords.latitude,
             longitude: startPos.coords.longitude
         };
-        var apiKey = "432d6f243fa019ec12795f9fcabff401";
+        var apiKey = "";
 
         $.ajax({
             'url': 'http://api.openweathermap.org/data/2.5/weather',
