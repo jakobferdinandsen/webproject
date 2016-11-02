@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.room').each(function () {
         doInput($(this));
-        updateRoom($(this), $(this).html().match(/\d+\d+/)[0]);
+        getRoomTemp($(this));
     });
 
     $('.inputButton').click(function () {
@@ -12,36 +12,36 @@ $(document).ready(function () {
         updateRoom(room, input.value);
     });
 
-    navigator.geolocation.getCurrentPosition(function (position) {
-        var startPos = position;
-        var pos = {
-            latitude: startPos.coords.latitude,
-            longitude: startPos.coords.longitude
-        };
-        var apiKey = "";
-
-        $.ajax({
-            'url': 'http://api.openweathermap.org/data/2.5/weather',
-            'type': 'GET',
-            'data': {
-                'lat': pos.latitude,
-                'lon': pos.longitude,
-                'units': 'metric',
-                'appid': apiKey,
-            },
-            'success': function (data) {
-                var city = data.name;
-                var temp = data.main.temp;
-                var desc = data.weather[0].description;
-
-                $('#city').append(" "+city);
-                $('#temp').append(" "+temp);
-                $('#desc').append(" "+desc);
-
-            },
-
-        });
-    });
+    // navigator.geolocation.getCurrentPosition(function (position) {
+    //     var startPos = position;
+    //     var pos = {
+    //         latitude: startPos.coords.latitude,
+    //         longitude: startPos.coords.longitude
+    //     };
+    //     var apiKey = "";
+    //
+    //     $.ajax({
+    //         'url': 'http://api.openweathermap.org/data/2.5/weather',
+    //         'type': 'GET',
+    //         'data': {
+    //             'lat': pos.latitude,
+    //             'lon': pos.longitude,
+    //             'units': 'metric',
+    //             'appid': apiKey,
+    //         },
+    //         'success': function (data) {
+    //             var city = data.name;
+    //             var temp = data.main.temp;
+    //             var desc = data.weather[0].description;
+    //
+    //             $('#city').append(" "+city);
+    //             $('#temp').append(" "+temp);
+    //             $('#desc').append(" "+desc);
+    //
+    //         },
+    //
+    //     });
+    // });
 });
 
 function doInput(room) {
@@ -68,4 +68,23 @@ function updateRoom(room, temp) {
     if (temp < 18) {
         room.css('backgroundColor', 'rgba(0, 0, 255, .5)');
     }
+}
+
+function getRoomTemp(room) {
+    var roomId = room.attr("id").slice(4);
+    $.ajax({
+        'url': 'http://localhost:8080/php/myAPI.php',
+        'type': 'GET',
+        'dataType': 'JSON',
+        'data': {
+            'roomid': roomId
+        },
+        'success': function (data) {
+            var temp = data.temperature;
+            updateRoom(room, temp);
+
+
+        },
+
+    });
 }
