@@ -18,16 +18,16 @@ if ($method !== "GET") {
 }
 $roomId = "";
 
-if (isset($_GET["roomid"])){
-    $roomId = $_GET["roomid"];
+if (isset($_GET["roomid"])) {
+    $roomId = trim($_GET["roomid"]);
 }
 
 
-if ($roomId === "" || !is_numeric($roomId)) {
+if (strlen($roomId) == 0) {
     http_response_code(400);
     echo json_encode([
         "code" => 400,
-        "msg" => "Need a numeric roomid: Got '$roomId'"
+        "msg" => "Room id cannot be empty"
     ]);
     die;
 }
@@ -37,5 +37,6 @@ echo json_encode([
     "code" => 200,
     "temperature" => rand(-5, 39),
     "msg" => "Success",
-    "id" => $roomId
+    "id" => $roomId,
+    "units" => "C"
 ]);
