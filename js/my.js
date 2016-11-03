@@ -73,13 +73,13 @@ function updateRoom(room, temp) {
 function getRoomTemp(room) {
     var roomId = room.attr("id").slice(4);
     $.ajax({
-        'url': 'http://localhost:8080/php/myAPI.php',
-        'type': 'GET',
-        'dataType': 'JSON',
-        'data': {
-            'roomid': roomId
+        type: 'GET',
+        url: 'http://localhost:8080/php/myAPI.php',
+        dataType: 'JSON',
+        data: {
+            roomid: roomId
         },
-        'success': function (data) {
+        success: function (data) {
             var temp = data.temperature;
             updateRoom(room, temp);
 
